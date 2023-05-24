@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aisle.widget.ApiViewStateConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:padding="@dimen/_30sdp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.LoginFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvGetOtp"
+        style="@style/TextView.small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:text="@string/lbl_get_otp"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvEnterNumber"
+        style="@style/TextView.bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_enter_number"
+        android:textSize="@dimen/_30ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGetOtp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvCountryCode"
+        style="@style/TextView.Rounded"
+        android:layout_width="@dimen/_60sdp"
+        android:text="@string/lbl_country_code"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:cursorVisible="false"
+        android:maxLines="1"
+        android:maxLength="4"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnterNumber" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etMobileNumber"
+        style="@style/TextView.Rounded"
+        android:layout_width="0dp"
+        tools:text="9999999999"
+        android:cursorVisible="false"
+        android:maxLines="1"
+        android:maxLength="10"
+        android:inputType="number"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@id/tvEnterNumber"
+        app:layout_constraintStart_toEndOf="@+id/tvCountryCode"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnterNumber" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/btnContinue"
+        android:text="@string/lbl_continue"
+        style="@style/TextView.SolidRounded"
+        tools:text="@string/lbl_continue"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCountryCode"/>
+
+</com.aisle.widget.ApiViewStateConstraintLayout>

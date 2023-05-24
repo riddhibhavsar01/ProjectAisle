@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aisle.widget.ApiViewStateConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:padding="@dimen/_30sdp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.otp.OtpFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvMobileNumber"
+        style="@style/TextView.small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        tools:text="+91 9999999999"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+   <androidx.appcompat.widget.AppCompatImageView
+       android:id="@+id/ivEdit"
+       android:layout_width="@dimen/_10sdp"
+       android:layout_height="@dimen/_10sdp"
+       android:src="@drawable/img_edit"
+       android:layout_marginStart="@dimen/_10sdp"
+       app:layout_constraintStart_toEndOf="@id/tvMobileNumber"
+       app:layout_constraintTop_toTopOf="@+id/tvMobileNumber"
+       app:layout_constraintBottom_toBottomOf="@+id/tvMobileNumber"
+       />
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gpNumber"
+        app:constraint_referenced_ids="tvMobileNumber,ivEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvEnterNumber"
+        style="@style/TextView.bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_enter_otp"
+        android:textSize="@dimen/_30ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMobileNumber" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tvOtp"
+        style="@style/TextView.Rounded"
+        android:layout_width="@dimen/_90sdp"
+        tools:text="1234"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:cursorVisible="false"
+        android:maxLines="1"
+        android:maxLength="4"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnterNumber" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/btnContinue"
+        android:text="@string/lbl_continue"
+        style="@style/TextView.SolidRounded"
+        tools:text="@string/lbl_continue"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOtp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvResendTimer"
+        style="@style/TextView.small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        tools:text="00:30"
+        android:textFontWeight="700"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintStart_toEndOf="@+id/btnContinue"
+      app:layout_constraintBottom_toBottomOf="@+id/btnContinue"
+        app:layout_constraintTop_toTopOf="@+id/btnContinue" />
+</com.aisle.widget.ApiViewStateConstraintLayout>

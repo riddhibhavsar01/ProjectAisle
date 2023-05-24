@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorWhite</item>
+        <item name="colorPrimaryDark">@color/colorWhite</item>
+        <item name="colorAccent">@color/colorWhite</item>
+        <item name="windowActionModeOverlay">true</item>
+     <!--   <item name="actionModeStyle">@style/AppStyle.ActionMode</item>-->
+    </style>
+
+
+
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_20sdp</item>
+    </style>
+
+    <style name="TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="TextView.small" parent="TextView">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+
+    <style name="TextView.medium" parent="TextView">
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+
+    <style name="TextView.bold" parent="TextView">
+        <item name="android:textSize">@dimen/_20ssp</item>
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+    </style>
+
+    <style name="TextView.Rounded">
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+        <item name="android:background">@drawable/bg_textview</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+    </style>
+
+
+    <style name="TextView.SolidRounded">
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:layout_width">@dimen/_90sdp</item>
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+        <item name="android:background">@drawable/bg_button</item>
+    </style>
+
+
+</resources>

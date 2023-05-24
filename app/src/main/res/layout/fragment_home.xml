@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aisle.widget.ApiViewStateConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/_15sdp"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTitle"
+                style="@style/TextView.bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_notes"
+                android:textSize="@dimen/_20ssp"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvPersonalMessage"
+                style="@style/TextView.small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="@string/lbl_personal_messages_to_you"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivUserProfile"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPersonalMessage"
+                app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvUserName"
+                style="@style/TextView.bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Meena, 23"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/colorWhite"
+                android:layout_marginStart="@dimen/_10sdp"
+               app:layout_constraintBottom_toTopOf="@+id/tvNoteDetails"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNoteDetails"
+                style="@style/TextView.small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+               android:layout_margin="@dimen/_10sdp"
+                android:textColor="@color/colorWhite"
+                android:text="@string/lbl_tap_to_review_50_notes"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="@id/ivUserProfile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/ivUserProfile" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvInterest"
+                style="@style/TextView.bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="@string/lbl_interested_in_you"
+                android:textSize="@dimen/_17ssp"
+                app:layout_constraintTop_toBottomOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                 />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvPremiumMember"
+                style="@style/TextView.small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorGray"
+                android:text="@string/lbl_premium_members_can_view_all_their_likes_at_once"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="@id/tvInterest"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInterest" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/btnUpgrade"
+
+                android:text="@string/lbl_upgrade"
+                style="@style/TextView.SolidRounded"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPremiumMember"
+                app:layout_constraintStart_toEndOf="@+id/tvPremiumMember"
+                app:layout_constraintTop_toBottomOf="@+id/ivUserProfile"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvConnections"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvPremiumMember"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="10"
+                tools:listitem="@layout/list_item" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".45" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:labelVisibilityMode="labeled"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:menu="@menu/bottom_navigation_menu" />
+</com.aisle.widget.ApiViewStateConstraintLayout>
