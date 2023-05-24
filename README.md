@@ -3,10 +3,6 @@
 *  Android Studio 4.1.2
 *  Android Version 6.0 to 10.0
 *  Kotlin Language
-
-**Setup Instruction**
-* Rename package using project name refactor menu
-* Rename App in string.xml file
  
 **Feature**
 =============
