@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mvvm Structure</string>
+    <string name="app_name">Aisle</string>
 
     <!--Label Text-->
     <string name="label_open_gallery">Open Gallery</string>
